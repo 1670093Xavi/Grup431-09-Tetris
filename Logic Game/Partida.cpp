@@ -155,12 +155,12 @@ void Partida::actualitza(double deltaTime)
     joc.dibuixa();
     string msgPunts = "Punts: " + to_string(punts);
     string msgNivell = "Nivell: " + to_string(nivells);
-    GraphicManager::getInstance()->drawFont(FONT_WHITE_30, POS_X_PUNTUACIO, POS_Y_PUNTUACIO, 0.8, msgPunts);
-    GraphicManager::getInstance()->drawFont(FONT_WHITE_30, POS_X_NIVELL, POS_Y_NIVELL, 0.8, msgNivell);
+    GraphicManager::getInstance()->drawFont(FONT_GREEN_30, POS_X_PUNTUACIO, POS_Y_PUNTUACIO, 0.8, msgPunts);
+    GraphicManager::getInstance()->drawFont(FONT_GREEN_30, POS_X_NIVELL, POS_Y_NIVELL, 0.8, msgNivell);
     if (finalJoc)
     {
-        string msgFinal = "JOC FINALITZAT";
-        GraphicManager::getInstance()->drawFont(FONT_WHITE_30, POS_X_FINAL_JOC, POS_Y_FINAL_JOC, 1.8, msgFinal);
+        string msgFinal = "HAS PERDUT!!!";
+        GraphicManager::getInstance()->drawFont(FONT_RED_30, POS_X_FINAL_JOC, POS_Y_FINAL_JOC, 1.8, msgFinal);
     }
 }
 
